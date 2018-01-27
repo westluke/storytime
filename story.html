@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.serif {
+    font-family: Georgia, serif;
+}
+
+p.sansserif {
+    font-family: "Lucida Grande", sans-serif;
+}
+
+div.container {
+    width: 100%;
+    height: 100%;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+#grad {
+  background: linear-gradient(to bottom right, #fce9a9, #ffffff);
+}
+
+body{
+  -webkit-animation-name: bgd; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 100s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  margin-left: 400px;
+  margin-right: 400px;
+
+
+}
+
+@-webkit-keyframes bgd {
+    0%   {background-color:#ffffff; }
+    25%  {background-color:#fffbed; }
+    50%  {background-color:#fff7db; }
+    75%  {background-color:#fff2c6; }
+    100% {background-color:#fce9a9; }
+  }
+
+
+header, footer {
+    text-align: center;
+    background-color: #155a96; 
+    
+}
+
+article{
+  text-align: left;
+  color: #5b584d;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  text-rendering: optimizeLegibility;
+  text-indent: 3em;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header><div id="grad">
+   <h1 class = "sans-serif"><font size = "7"><b>Storytime!</b></font></h1>
+</div></header>
+
+
+<article>
+  <h1 class = "sans-serif">The story</h1>
+  <p class = "serif"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at nisi viverra nisi suscipit pharetra. Nullam lobortis mi quis gravida blandit. Sed tristique nisl sagittis sem sagittis sagittis. Nunc vel pretium magna. Duis quis ante rhoncus, dapibus dui id, laoreet tellus. Nunc eget porttitor sapien. Mauris malesuada maximus tempus. Nulla ante dolor, vehicula ut mollis id, bibendum vel quam. Donec ac aliquam diam. Aenean vel elit in quam tincidunt tincidunt nec vitae nisi. Vivamus a tempus mi.</p>
+ 
+</article>
+
+</div>
+
+</body>
+</html>
