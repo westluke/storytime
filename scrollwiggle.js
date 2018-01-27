@@ -23,6 +23,32 @@ window.onscroll = function(e){
     return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
   });
 }
+var fonts = ["Arial","Times New Roman", "Calibri"]
+var changeFont = function(font){
+  console.log(font)
+    document.getElementById("story").style.fontFamily = font;
+}
+window.onscroll = function(e){
+    var d = new Date();
+    var next = Math.floor(d.getSeconds()/20)
+    console.log(next)
+    switch (next){
+      case 0:
+          changeFont(fonts[0])
+          break
+      case 1:
+          changeFont(fonts[1])
+          break
+      case 2:
+          changeFont(fonts[2])
+          break
+
+    }
+
+}
+
+
+
 
 // Effects we may want:
 /*
