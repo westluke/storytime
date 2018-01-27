@@ -5,13 +5,10 @@
   display: block;
 }*/
 
-#story {
-  position: relative;
-  top: 40px;
-  left: 200px;
-  width: 400px;
-}
-
 span {
   display: inline-block;
+}
+
+article {
+  position: relative;
 }

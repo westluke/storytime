@@ -20,9 +20,19 @@ window.onload = function(e){
 
 window.onscroll = function(e){
   $("span").css("-webkit-transform", function(index){
-    return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
+    return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
+  });
+
+  $("article").css("left", function(index){
+    return ((Math.random() * 5) - 2.5) + "px";
+  });
+
+  $("article").css("top", function(index){
+    return ((Math.random() * 5) - 2.5) + "px";
   });
 }
+
+// Make some words red, randomly.
 
 // Effects we may want:
 /*
