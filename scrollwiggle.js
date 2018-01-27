@@ -1,9 +1,3 @@
-// window.onload = function(e){
-//   console.log("adsl;kfj");
-//   //console.log($('span'));
-//   $("span").css({'transform' : 'rotate(' + 40 + 'deg)'});
-// }
-
 window.onload = function(e){
   $("p").each(function(index){
     words = $(this).text().split(" ");
@@ -18,19 +12,45 @@ window.onload = function(e){
   });
 }
 
-window.onscroll = function(e){
-  $("span").css("-webkit-transform", function(index){
-    return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
-  });
 
-  $("article").css("left", function(index){
-    return ((Math.random() * 5) - 2.5) + "px";
-  });
-
-  $("article").css("top", function(index){
-    return ((Math.random() * 5) - 2.5) + "px";
-  });
+var fonts = ["Arial","Times New Roman", "Calibri"]
+var changeFont = function(font){
+  console.log(font)
+    document.getElementById("story").style.fontFamily = font;
 }
+
+window.onscroll = function(e){
+    var d = new Date();
+    var next = Math.floor(d.getSeconds() / 20)
+    console.log(next)
+    switch (next){
+      case 0:
+          changeFont(fonts[0])
+          break
+      case 1:
+          changeFont(fonts[1])
+          break
+      case 2:
+          changeFont(fonts[2])
+          break
+
+    }
+
+    $("span").css("-webkit-transform", function(index){
+      return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
+    });
+
+    $("article").css("left", function(index){
+      return ((Math.random() * 5) - 2.5) + "px";
+    });
+
+    $("article").css("top", function(index){
+      return ((Math.random() * 5) - 2.5) + "px";
+    });
+}
+
+
+
 
 // Make some words red, randomly.
 
