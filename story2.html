@@ -46,14 +46,22 @@ div.story {
 }
 
 body{
-  -webkit-animation-name: bgd; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: gradient; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
   -webkit-animation-timing-function: linear;
   margin-left: 400px;
   margin-right: 400px;
-  background-color: rgb(121, 183, 216);
+  background-color: #35a5e0;
+}
+
+@-webkit-keyframes gradient {
+  0% {background-color: #35a5e0}
+  25% {background-color: #4cade0 }
+  50% {background-color: #60b0db}
+  75% {background-color: #7cbcdd}
+  100% {background-color: #96c6dd}
 }
 
 header, footer {
@@ -71,8 +79,28 @@ article {
   letter-spacing: -.003em;
   text-rendering: optimizeLegibility;
   color: #4e5c72;
-
 }
+
+span {
+  -webkit-animation-name: float;
+  position: relative;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+ -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes float {
+  0% {top: -6px; -webkit-transform: rotate(0deg); color: #1c2c35}
+  20% {top: -3px; -webkit-transform: rotate(3deg); color: #304551}
+  40% {top: 6px; -webkit-transform: rotate(2deg); color: #1c445b}
+  60% {top: 3px; -webkit-transform: rotate(-3deg); color: #07537f}
+  80% {top: -5px; -webkit-transform: rotate(-2deg); color: #253944}
+  100% {top: -6px; -webkit-transform: rotate(0deg); color: #1c2c35}
+}
+
+
+
 
 </style>
 </head>
@@ -80,6 +108,7 @@ article {
 <div class="story">
 <header><div id="grad">
 <h1 class = "sans-serif"><font size = "7"><b>The Flood</b></font></h1>
+
 </div></header>
 
 
@@ -103,7 +132,7 @@ article {
 
 <p>There was no break of day the next mornin'. I could barely see the barn and the one lane road in to town was under water. It looked as though we was anchored in a slow movin' river, the surface of which was bubblin' and <span><b>boilin'</b></span> from the drivin' rain. Rain had seeped in through the joints of the tin roof over  the porch and it sagged under the weight of the water. Pop and me went out on the porch and saw the water had already reached the top step. "Another couple inches, boy, we're gonna have'ta move upstairs." He walked to the corner of the porch and pointed to the old Dodge standin' in the driveway. It was slued around broadside with its engine pointed upstream.</p>
 
-<p>Pop thought a while, then he made up his mind. "First of all," he said, "I 
+<p>Pop thought a while, then he made up his mind. "First of all," he said, "I
 want'cha to get a couple of gas cans from outta the kitchen and bring 'em out  here, I'm gonna drain the tank of the Dodge and put the gas in the tractor." It took an hour or more with the rain pourin' down the backs of our necks trying to syphon the gas out with a rubber hose. Then we went inside to find Mom;  she was in the kitchen tryin' to get the stove lit.</p>
 
 <p>"The wood's wet and the chimney won't draw. There's no way to cook any  more." She looked very scared. "We're gonna die if we can't cook." Pop held her for a minute to quiet her down some, then he told her to get our valuables  together -- "Like all the things we need to prove who we are and what we own ... then," he said, "We're gonna git ourselves on that tractor and git up onto high ground." </p>
@@ -138,10 +167,12 @@ want'cha to get a couple of gas cans from outta the kitchen and bring 'em out  h
 
 
 
-<p><i>"Seven cent cotton and forty cent meat, 
-how in the world can a poor man eat? 
-Flour up high, and cotton down low, 
+<p><i>"Seven cent cotton and forty cent meat,
+how in the world can a poor man eat?
+Flour up high, and cotton down low,
 how the hell can we raise the dough?"</i></p>
+
+<p>From <a href="http://writers-voice.com/FGHIJ/H/Harry_Buschman_the_flood.htm">http://writers-voice.com/FGHIJ/H/Harry_Buschman_the_flood.htm</a>
 
 
   <div id="scroller"></div>

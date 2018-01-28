@@ -1,4 +1,7 @@
 window.onload = function(e){
+  $("span").css("-webkit-animation-duration", function(index){
+    return ((Math.random() * 4) + 3) + "s";
+  });
 }
 
 
@@ -8,17 +11,7 @@ var changeFont = function(font){
     document.getElementById("story").style.fontFamily = font;
 }
 
-var auto_jiggle = false;
-
-function jiggleHeader(){
-  $("h1").css("-webkit-transform", function(index){
-    return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
-  });
-}
-
-setInterval(jiggleHeader, 100);
-
-function jiggle(){
+function float(){
   $("span").css("-webkit-transform", function(index){
     return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
   });
@@ -51,17 +44,3 @@ function jiggle(){
     return result;
   });
 }
-
-window.onscroll = function(e){
-  if (!auto_jiggle){
-    if ($("html").scrollTop() > 5000){
-      auto_jiggle = true;
-      setInterval(jiggle, 30);
-    } else {
-      jiggle();
-    }
-  }
-}
-
-
-

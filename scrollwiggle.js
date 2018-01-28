@@ -8,8 +8,6 @@ var changeFont = function(font){
     document.getElementById("story").style.fontFamily = font;
 }
 
-var auto_jiggle = false;
-
 function jiggleHeader(){
   $("h1").css("-webkit-transform", function(index){
     return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
@@ -53,14 +51,7 @@ function jiggle(){
 }
 
 window.onscroll = function(e){
-  if (!auto_jiggle){
-    if ($("html").scrollTop() > 5000){
-      auto_jiggle = true;
-      setInterval(jiggle, 30);
-    } else {
-      jiggle();
-    }
-  }
+    jiggle();
 }
 
 
