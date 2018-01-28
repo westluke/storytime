@@ -10,9 +10,29 @@ var changeFont = function(font){
 
 var auto_jiggle = false;
 
+function jiggleHeader(){
+  $("h1").css("-webkit-transform", function(index){
+    return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
+  });
+}
+
+setInterval(jiggleHeader, 30);
+
 function jiggle(){
   $("span").css("-webkit-transform", function(index){
     return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
+  });
+
+  $("span").css("font-size", function(index){
+    return ((Math.random() * 4) + 18) + "px";
+  });
+
+  $("span").css("color", function(index){
+    var red = Math.floor((Math.random()*50 + 210));
+    var green = Math.floor((Math.random()*50 + 290));
+    var blue = Math.floor((Math.random()*50 + 185));
+    result = "rgb(" + red + ", " + green + ", " + blue + ")";
+    return result;
   });
 
   $("article").css("left", function(index){
@@ -24,8 +44,8 @@ function jiggle(){
   });
 
   $("body").css("background-color", function(index){
-    var red = Math.floor((Math.random()*30 + 105));
-    var green = Math.floor((Math.random()*30 + 10));
+    var red = Math.floor((Math.random()*30 + 65));
+    var green = Math.floor((Math.random()*30 + 0));
     var blue = Math.floor((Math.random()*20));
     result = "rgb(" + red + ", " + green + ", " + blue + ")";
     return result;
