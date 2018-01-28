@@ -9,9 +9,9 @@ var changeFont = function(font){
 }
 
 window.onscroll = function(e){
-    // $("span").css("-webkit-transform", function(index){
-    //   return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
-    // });
+    $("span").css("-webkit-transform", function(index){
+      return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
+    });
 
     $("article").css("left", function(index){
       return ((Math.random() * 10) - 5) + "px";
@@ -21,28 +21,17 @@ window.onscroll = function(e){
       return ((Math.random() * 10) - 5) + "px";
     });
 
-    // $("body").css("background-color", function(index){
-    //   return (#591206)
-    // })
-
-    $("article").css("-webkit-transform", function(index){
-      return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
-    });
+    // $("article").css("-webkit-transform", function(index){
+    //   return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
+    // });
 
     $("body").css("background-color", function(index){
       var red = Math.floor((Math.random()*30 + 105));
       var green = Math.floor((Math.random()*30 + 10));
       var blue = Math.floor((Math.random()*20));
       result = "rgb(" + red + ", " + green + ", " + blue + ")";
-      console.log(result);
       return result;
     });
-
-    // $("body").css("background-color", function(index){
-    //   ret = "rgb(255, 0, " + Math.floor((Math.random() * 100)) + ")";
-    //   console.log(ret);
-    //   return ret;
-    // });
 }
 
 
