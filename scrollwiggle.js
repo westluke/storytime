@@ -16,7 +16,7 @@ function jiggleHeader(){
   });
 }
 
-setInterval(jiggleHeader, 30);
+setInterval(jiggleHeader, 100);
 
 function jiggle(){
   $("span").css("-webkit-transform", function(index){
