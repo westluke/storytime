@@ -1,16 +1,16 @@
-window.onload = function(e){
-  $("p").each(function(index){
-    words = $(this).text().split(" ");
-    words = words.filter(function(word){
-      return !((word.length <= 1) && (word.trim() == ""))
-    });
-    $(this).empty();
-    var para = this;
-    $.each(words, function(i, v){
-      $(para).append("<span>" + v + "</span> ");
-    });
-  });
-}
+// window.onload = function(e){
+//   $("p").each(function(index){
+//     words = $(this).text().split(" ");
+//     words = words.filter(function(word){
+//       return !((word.length <= 1) && (word.trim() == ""))
+//     });
+//     $(this).empty();
+//     var para = this;
+//     $.each(words, function(i, v){
+//       $(para).append("<span>" + v + "</span> ");
+//     });
+//   });
+// }
 
 
 var fonts = ["Arial","Times New Roman", "Calibri"]
