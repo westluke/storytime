@@ -15,6 +15,18 @@ function jiggle(){
     return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
   });
 
+  $("span").css("font-size", function(index){
+    return ((Math.random() * 4) + 18) + "px";
+  });
+
+  $("span").css("color", function(index){
+    var red = Math.floor((Math.random()*30 + 215));
+    var green = Math.floor((Math.random()*30 + 210));
+    var blue = Math.floor((Math.random()*30 + 195));
+    result = "rgb(" + red + ", " + green + ", " + blue + ")";
+    // return result;rgb(237,224,210)
+  });
+
   $("article").css("left", function(index){
     return ((Math.random() * 10) - 5) + "px";
   });
