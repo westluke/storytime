@@ -1,15 +1,4 @@
 window.onload = function(e){
-  $("p").each(function(index){
-    words = $(this).text().split(" ");
-    words = words.filter(function(word){
-      return !((word.length <= 1) && (word.trim() == ""))
-    });
-    $(this).empty();
-    var para = this;
-    $.each(words, function(i, v){
-      $(para).append("<span>" + v + "</span> ");
-    });
-  });
 }
 
 
@@ -20,32 +9,28 @@ var changeFont = function(font){
 }
 
 window.onscroll = function(e){
-    var d = new Date();
-    var next = Math.floor(d.getSeconds() / 20)
-    console.log(next)
-    switch (next){
-      case 0:
-          changeFont(fonts[0])
-          break
-      case 1:
-          changeFont(fonts[1])
-          break
-      case 2:
-          changeFont(fonts[2])
-          break
-
-    }
-
     $("span").css("-webkit-transform", function(index){
-      return "rotate(" + ((Math.random() * 10) - 5) + "deg)";
+      return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
     });
 
     $("article").css("left", function(index){
-      return ((Math.random() * 5) - 2.5) + "px";
+      return ((Math.random() * 10) - 5) + "px";
     });
 
     $("article").css("top", function(index){
-      return ((Math.random() * 5) - 2.5) + "px";
+      return ((Math.random() * 10) - 5) + "px";
+    });
+
+    // $("article").css("-webkit-transform", function(index){
+    //   return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
+    // });
+
+    $("body").css("background-color", function(index){
+      var red = Math.floor((Math.random()*30 + 105));
+      var green = Math.floor((Math.random()*30 + 10));
+      var blue = Math.floor((Math.random()*20));
+      result = "rgb(" + red + ", " + green + ", " + blue + ")";
+      return result;
     });
 }
 
