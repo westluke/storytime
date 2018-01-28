@@ -8,30 +8,39 @@ var changeFont = function(font){
     document.getElementById("story").style.fontFamily = font;
 }
 
+var auto_jiggle = false;
+
+function jiggle(){
+  $("span").css("-webkit-transform", function(index){
+    return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
+  });
+
+  $("article").css("left", function(index){
+    return ((Math.random() * 10) - 5) + "px";
+  });
+
+  $("article").css("top", function(index){
+    return ((Math.random() * 10) - 5) + "px";
+  });
+
+  $("body").css("background-color", function(index){
+    var red = Math.floor((Math.random()*30 + 105));
+    var green = Math.floor((Math.random()*30 + 10));
+    var blue = Math.floor((Math.random()*20));
+    result = "rgb(" + red + ", " + green + ", " + blue + ")";
+    return result;
+  });
+}
+
 window.onscroll = function(e){
-    $("span").css("-webkit-transform", function(index){
-      return "rotate(" + ((Math.random() * 20) - 10) + "deg)";
-    });
-
-    $("article").css("left", function(index){
-      return ((Math.random() * 10) - 5) + "px";
-    });
-
-    $("article").css("top", function(index){
-      return ((Math.random() * 10) - 5) + "px";
-    });
-
-    // $("article").css("-webkit-transform", function(index){
-    //   return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
-    // });
-
-    $("body").css("background-color", function(index){
-      var red = Math.floor((Math.random()*30 + 105));
-      var green = Math.floor((Math.random()*30 + 10));
-      var blue = Math.floor((Math.random()*20));
-      result = "rgb(" + red + ", " + green + ", " + blue + ")";
-      return result;
-    });
+  if (!auto_jiggle){
+    if ($("html").scrollTop() > 5000){
+      auto_jiggle = true;
+      setInterval(jiggle, 30);
+    } else {
+      jiggle();
+    }
+  }
 }
 
 
