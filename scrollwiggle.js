@@ -27,9 +27,22 @@ window.onscroll = function(e){
 
     $("article").css("-webkit-transform", function(index){
       return "rotate(" + ((Math.random() * 2) - 1) + "deg)";
-    })
+    });
 
-    $("span")
+    $("body").css("background-color", function(index){
+      var red = Math.floor((Math.random()*30 + 105));
+      var green = Math.floor((Math.random()*30 + 10));
+      var blue = Math.floor((Math.random()*20));
+      result = "rgb(" + red + ", " + green + ", " + blue + ")";
+      console.log(result);
+      return result;
+    });
+
+    // $("body").css("background-color", function(index){
+    //   ret = "rgb(255, 0, " + Math.floor((Math.random() * 100)) + ")";
+    //   console.log(ret);
+    //   return ret;
+    // });
 }
 
 
