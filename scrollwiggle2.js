@@ -2,6 +2,10 @@ window.onload = function(e){
   $("span").css("-webkit-animation-duration", function(index){
     return ((Math.random() * 4) + 3) + "s";
   });
+
+  $("p").css("-webkit-animation-duration", function(index){
+    return((Math.random() * 4) + 3) + "s";
+  });
 }
 
 

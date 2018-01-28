@@ -26,6 +26,15 @@ cleft{
     transform: scaleX(-1);
 }
 
+p {
+  -webkit-animation-name: semifloat;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-aimation-direction: normal;
+  -webkit-animation-timing-function: linear;
+  position: relative;
+}
+
 p.serif {
     font-family: Georgia, serif;
 }
@@ -71,13 +80,8 @@ header, footer {
 }
 
 article {
-  -webkit-animation-name: semifloat;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-aimation-direction: normal;
-  -webkit-animation-timing-function: linear;
   position: relative;
-  top: 100px;
+  top: 10px;
   text-align: left;
   font-family: Georgia;
   font-weight: 400;
@@ -86,7 +90,7 @@ article {
   line-height: 1.58;
   letter-spacing: -.003em;
   text-rendering: optimizeLegibility;
-  color: #4e5c72;
+  color: #2d3849;
 }
 
 span {
@@ -99,12 +103,12 @@ span {
 }
 
 @-webkit-keyframes semifloat {
-  0% {top: -15px; -webkit-transform: rotate(0deg); color: #1c2c35}
-  20% {top: -10px; -webkit-transform: rotate(1deg); color: #304551}
-  40% {top: 30px; -webkit-transform: rotate(1deg); color: #1c445b}
-  60% {top: 15px; -webkit-transform: rotate(0deg); color: #07537f}
-  80% {top: -10px; -webkit-transform: rotate(-1deg); color: #253944}
-  100% {top: -15px; -webkit-transform: rotate(0deg); color: #1c2c35}
+  0% {top: -15px; -webkit-transform: rotate(0deg);}
+  20% {top: -10px; -webkit-transform: rotate(1deg);}
+  40% {top: 30px; -webkit-transform: rotate(1deg);}
+  60% {top: 15px; -webkit-transform: rotate(0deg);}
+  80% {top: -10px; -webkit-transform: rotate(-1deg);}
+  100% {top: -15px; -webkit-transform: rotate(0deg);}
 }
 
 @-webkit-keyframes float {
