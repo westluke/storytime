@@ -9,11 +9,11 @@
 <style>
 
 drops{
-    position: absolute;
-    left: 300px;
-    top: 50px;
-    width: 300%;
-    height: 300%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 400%;
+    height: 400%;
 }
 
 cleft{
@@ -71,6 +71,13 @@ header, footer {
 }
 
 article {
+  -webkit-animation-name: semifloat;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-aimation-direction: normal;
+  -webkit-animation-timing-function: linear;
+  position: relative;
+  top: 100px;
   text-align: left;
   font-family: Georgia;
   font-weight: 400;
@@ -91,6 +98,15 @@ span {
  -webkit-animation-timing-function: linear;
 }
 
+@-webkit-keyframes semifloat {
+  0% {top: -15px; -webkit-transform: rotate(0deg); color: #1c2c35}
+  20% {top: -10px; -webkit-transform: rotate(1deg); color: #304551}
+  40% {top: 30px; -webkit-transform: rotate(1deg); color: #1c445b}
+  60% {top: 15px; -webkit-transform: rotate(0deg); color: #07537f}
+  80% {top: -10px; -webkit-transform: rotate(-1deg); color: #253944}
+  100% {top: -15px; -webkit-transform: rotate(0deg); color: #1c2c35}
+}
+
 @-webkit-keyframes float {
   0% {top: -6px; -webkit-transform: rotate(0deg); color: #1c2c35}
   20% {top: -3px; -webkit-transform: rotate(3deg); color: #304551}
@@ -108,7 +124,7 @@ span {
 
 
 <body>
-<drops><img src="water.gif" alt="water" align="left"></drops>
+<drops><img src="rain.gif" alt="water" align="left"></drops>
 <div class="story">
 <header><div id="grad">
 <h1 class = "sans-serif"><font size = "7"><b>The Flood</b></font></h1>
